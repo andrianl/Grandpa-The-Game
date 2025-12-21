@@ -1,26 +1,29 @@
-# Unreal Engine 5 2D Side Scroller Blueprint Template
-A basic 2D side scroller blueprint template for Unreal Engine 5.
-**This template requires Unreal Engine 5.5 or higher for the main branch which includes fixes to the orthographic camera. Other versions of this template for UE 5.1~5.4 can be found in branches the other branches**
+Sure! Here is the English version of the **README.md** for your project:
 
-![template](https://github.com/CobraCodeDev/TP_2DSideScrollerBP/assets/141534668/5bd1b1c9-5468-4de4-956f-4f688375023a)
+---
 
-## Advanced Templates
-![TP_ZDSideScrollerBP](https://github.com/CobraCodeDev/TP_2DSideScrollerBP/assets/141534668/cd6b2446-cd31-4964-81db-496b1f7d86d8)
-![TP_ZDTopDownBP](https://github.com/CobraCodeDev/TP_2DSideScrollerBP/assets/141534668/29672976-2ae4-4ebd-ac14-b94a21111117)
+# 👴 Grumpy's Getaway: Mobile 2D Platformer
 
-As a patron you get access to the advanced 2D/3D hybrid version of this template and also Top Down 2D template.
-Both of these use the free PaperZD plugin which adds Animation Blueprint and Anim Notify support for a better workflow.
+**Grumpy's Getaway** is a mobile 2D platformer following the adventures of an inventive Grandpa.
 
-https://www.patreon.com/collection/111760
+## 🎮 Game Overview
 
-## How to Install
-Click on Code and then Download ZIP to download the template.
-![image](https://github.com/CobraCodeDev/TP_2DSideScrollerBP/assets/141534668/fbb64928-0b9c-4eeb-ad91-5b8910173fff)
+Control Grandpa as he collects potatoes, completes quests for his Grandson, and defends himself using handy items like apples, peas, and spit.
 
-After that follow the simple instructions in this document:
-https://cobracode.notion.site/How-to-install-an-Unreal-Engine-Template-b7fe36e8f9d142b2b02a4fc88600b0f9?pvs=4
+* **Genre**: 2D Side Scroller.
+* **Main Character**: Grandpa (Did).
+* **Platform**: Mobile.
 
-## Art Assets
-Huge thanks to Ansimuz for putting out these art assets as Public Domain!
+## 🛠 How to Install the Project
 
-https://ansimuz.itch.io/sunny-land-pixel-game-art
+Follow these steps to set up the project for development:
+
+1. **Download the Archive**: Click the **Code** button and select **Download ZIP** from this repository.
+2. **Engine Version**: Ensure you have **Unreal Engine 5.7 or higher** installed, as this template requires the updated orthographic camera features.
+3. **Launch**:
+* Extract the downloaded ZIP file.
+* Right-click the `.uproject` file and select "Switch Unreal Engine version" if needed.
+* Open the project via the Unreal Editor.
+
+
+4. **Detailed Instructions**: For more in-depth setup information, please refer to the [Notion documentation guide](https://cobracode.notion.site/How-to-install-an-Unreal-Engine-Template-b7fe36e8f9d142b2b02a4fc88600b0f9?pvs=4).
