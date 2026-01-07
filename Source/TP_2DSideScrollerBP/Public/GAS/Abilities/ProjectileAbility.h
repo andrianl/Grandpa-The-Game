@@ -7,9 +7,6 @@
 #include "Actors/BaseProjectile2D.h"
 #include "ProjectileAbility.generated.h"
 
-/**
- * 
- */
 UCLASS()
 class TP_2DSIDESCROLLERBP_API UProjectileAbility : public UGameplayAbility
 {
