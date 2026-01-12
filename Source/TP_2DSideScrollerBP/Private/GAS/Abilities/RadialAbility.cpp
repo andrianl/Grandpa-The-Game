@@ -74,7 +74,7 @@ void URadialAbility::ActivateAbility(const FGameplayAbilitySpecHandle Handle, co
             Avatar, 
             DamageTypeClass);
 
-        SpecHandle.Data.Get()->SetSetByCallerMagnitude(FGameplayTag::RequestGameplayTag("GAS.Stats.Damage"), FinalDamage);
+        SpecHandle.Data.Get()->SetSetByCallerMagnitude(FGameplayTag::RequestGameplayTag("GAS.Stats.Damage"), -FinalDamage);
 
         UAbilitySystemComponent* TargetASC = UAbilitySystemBlueprintLibrary::GetAbilitySystemComponent(HitActor);
         if (IsValid(TargetASC))
