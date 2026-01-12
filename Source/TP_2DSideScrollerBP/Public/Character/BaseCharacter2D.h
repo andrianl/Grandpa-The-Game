@@ -38,6 +38,9 @@ public:
 protected:
     virtual void BeginPlay() override;
 
+    UFUNCTION(BlueprintCallable)
+    bool ActivateAbility(TSubclassOf<UGameplayAbility> AbilityClass);
+
 public:
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "GAS")

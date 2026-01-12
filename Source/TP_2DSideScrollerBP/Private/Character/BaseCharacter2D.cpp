@@ -31,6 +31,16 @@ void ABaseCharacter2D::BeginPlay()
 	}
 }
 
+bool ABaseCharacter2D::ActivateAbility(TSubclassOf<UGameplayAbility> AbilityClass)
+{
+	const bool bContains = DefaultAbilities.Contains(AbilityClass);
+	if (!bContains)
+	{
+		UE_LOG(LogTemp, Warning, TEXT("AbilityClass is not in DefaultAbilities array."));
+		return false;
+	}
+	 return AbilitySystemComponent->TryActivateAbilityByClass(AbilityClass);
+}
 
 void ABaseCharacter2D::InitializeAttributes()
 {
