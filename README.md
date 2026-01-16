@@ -1,4 +1,4 @@
-Sure! Here is the English version of the **README.md** for your project:
+
 
 ---
 

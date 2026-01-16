@@ -29,7 +29,6 @@ protected:
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly)
 	FGameplayAttributeData MaxHealth;
-	//~ ... Other Gameplay Attributes here ...
 
 public:
 	//~ Helper functions for "Health" attributes
