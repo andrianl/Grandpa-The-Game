@@ -51,7 +51,7 @@ void ABaseProjectile2D::BeginPlay()
 
 void ABaseProjectile2D::FireInDirection(const FVector& ShootDirection)
 {
-    if (ProjectileMovement)
+    if (IsValid(ProjectileMovement))
     {
         ProjectileMovement->Velocity = ShootDirection.GetSafeNormal() * ProjectileMovement->InitialSpeed;
     }
