@@ -38,17 +38,11 @@ public:
 protected:
     virtual void BeginPlay() override;
 
-    UPROPERTY(BlueprintReadOnly, Category = "Combat")
-    FVector FacingDirection2D;
-
-	UFUNCTION(BlueprintCallable, Category = "Combat")
-    void UpdateFacingDirection(float InputValue);
-
-	UFUNCTION(BlueprintPure, Category = "Combat")
-	FVector GetFacingDirection2D() const { return FacingDirection2D; }
+    UFUNCTION(BlueprintCallable)
+    bool ActivateAbility(TSubclassOf<UGameplayAbility> AbilityClass);
 
 public:
-    // --- GAS Компоненти ---
+
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "GAS")
 	TObjectPtr<UAbilitySystemComponent> AbilitySystemComponent;
 
@@ -61,19 +55,14 @@ public:
     UPROPERTY()
     TArray<TObjectPtr<UAttributeSet>> SpawnedAttributeSets;
 
-        // --- Налаштування для Блюпринтів ---
-
-    // 1. Ефекти, які накладаються при старті (встановлюють HP, Mana)
     UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "GAS|DefaultAttributesEffects")
     TArray<TSubclassOf<UGameplayEffect>> DefaultAttributeEffects;
 
-    // 2. Абілки, які видаються при старті (Стрільба, Стрибок)
     UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "GAS|DefaultAbilities")
     TArray<TSubclassOf<UGameplayAbility>> DefaultAbilities;
 
 protected:
 
-    // --- Функції Ініціалізації ---
     void InitializeAttributes();
     void GiveDefaultAbilities();
 };
