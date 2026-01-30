@@ -19,9 +19,11 @@ public:
     UResourceData* ResourceSettings;
 
 protected:
+    // This is called when we change properties in the Editor
     virtual void PostEditChangeProperty(FPropertyChangedEvent& PropertyChangedEvent) override;
+
     virtual void NotifyActorBeginOverlap(AActor* OtherActor) override;
 
-    UPROPERTY(VisibleAnywhere)
+    UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components")
     class UPaperSpriteComponent* SpriteComp;
 };
