@@ -25,6 +25,11 @@ void URadialAbility::ActivateAbility(const FGameplayAbilitySpecHandle Handle, co
 
     // 2. Setup Sphere Trace parameters
     const FVector Origin = Avatar->GetActorLocation();
+
+	FVector2D Origin2D = FVector2D(Origin.X, Origin.Z) + SpawnOffset;
+
+	const FVector TraceOrigin = FVector(Origin2D.X, Origin.Y, Origin.Y);
+
     TArray<FHitResult> HitResults;
     TArray<AActor*> ActorsToIgnore;
     ActorsToIgnore.Add(Avatar);
@@ -34,8 +39,8 @@ void URadialAbility::ActivateAbility(const FGameplayAbilitySpecHandle Handle, co
     // 3. Perform Multi-Sphere Trace for specified Object Types
     bool bHit = UKismetSystemLibrary::SphereTraceMultiForObjects(
         GetWorld(),
-        Origin,         // Start
-        Origin,         // End (static sphere)
+        TraceOrigin,         // Start
+        TraceOrigin,         // End (static sphere)
         AbilityRadius,
         ObjectTypes,
         false,          // bTraceComplex

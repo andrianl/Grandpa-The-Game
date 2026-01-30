@@ -20,13 +20,13 @@ public:
 	TSubclassOf<UGameplayEffect> DamageEffectClass;
 
 	UPROPERTY(EditAnywhere, Category = "Combat")
-	TSubclassOf<UDamageType> DamageTypeClass;
+	TSubclassOf<UDamageType> DamageTypeClass;	
+	
+	UPROPERTY(EditDefaultsOnly)
+	FVector2D SpawnOffset;
 
 	UPROPERTY(EditAnywhere, Category = "Combat")
 	float Damage = 20.f;
-
-	UPROPERTY(EditDefaultsOnly)
-	FVector2D SpawnOffset;
 
 	UPROPERTY(EditAnywhere, Category = "Combat")
 	float AbilityRadius = 300.f;
@@ -34,8 +34,10 @@ public:
 	UPROPERTY(EditAnywhere, Category = "Combat")
 	TArray<TEnumAsByte<EObjectTypeQuery>> ObjectTypes;
 
-	UPROPERTY(EditAnywhere, Category = "Combat")
-	bool bShowDebug = true;
+#if WITH_EDITORONLY_DATA
+    UPROPERTY(EditAnywhere, Category = "Combat")
+    bool bShowDebug = true;
+#endif
 
 	virtual void ActivateAbility(const FGameplayAbilitySpecHandle Handle, 
 		const FGameplayAbilityActorInfo* ActorInfo, 
