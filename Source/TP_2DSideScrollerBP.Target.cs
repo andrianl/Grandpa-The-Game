@@ -8,7 +8,7 @@ public class TP_2DSideScrollerBPTarget : TargetRules
 	public TP_2DSideScrollerBPTarget(TargetInfo Target) : base(Target)
 	{
 		Type = TargetType.Game;
-		DefaultBuildSettings = BuildSettingsVersion.V6;
+		DefaultBuildSettings = BuildSettingsVersion.Latest;
 
 		ExtraModuleNames.AddRange( new string[] { "TP_2DSideScrollerBP" } );
 	}

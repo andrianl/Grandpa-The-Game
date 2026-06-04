@@ -8,7 +8,7 @@ public class TP_2DSideScrollerBPEditorTarget : TargetRules
 	public TP_2DSideScrollerBPEditorTarget(TargetInfo Target) : base(Target)
 	{
 		Type = TargetType.Editor;
-		DefaultBuildSettings = BuildSettingsVersion.V6;
+		DefaultBuildSettings = BuildSettingsVersion.Latest;
 
 		ExtraModuleNames.AddRange( new string[] { "TP_2DSideScrollerBP" } );
 	}
